@@ -344,6 +344,9 @@ proc ::pd_menus::build_tools_menu {mymenu} {
     $mymenu add command -label [_ "Message..."] \
         -accelerator "$accelerator+Shift+M" \
         -command {::pd_menucommands::scheduleAction menu_message_dialog}
+    $mymenu add command -label [_ "Asistente IA..."] \
+        -accelerator "$accelerator+Shift+A" \
+        -command {::pd_menucommands::scheduleAction menu_ai_assistant_dialog}
 }
 
 proc ::pd_menus::build_help_menu {mymenu} {

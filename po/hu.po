@@ -1,12 +1,12 @@
 # Hungarian translation of Pure Data.
 # This file is put in the public domain
-#
+# 
 # Andras Muranyi <muranyia@gmail.com>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-02 09:07+0200\n"
+"POT-Creation-Date: 2025-06-23 14:53+0200\n"
 "PO-Revision-Date: 2010-01-29 21:09+0100\n"
 "Last-Translator: Andras Muranyi <muranyia@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -2023,6 +2023,9 @@ msgstr "Szülő ablak"
 #, fuzzy
 msgid "Message..."
 msgstr "Üzenet"
+
+msgid "Asistente IA..."
+msgstr ""
 
 msgid "HTML Manual..."
 msgstr "HTML kézikönyv..."

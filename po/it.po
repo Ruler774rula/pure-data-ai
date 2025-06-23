@@ -1,6 +1,6 @@
 # Italian translation for Pure Data
 # This file is put in the public domain
-#
+# 
 # Lorenzo Sutton (lorenzosu) <lsutton@libero.it>, 2009.
 # Valerio Orlandini <valeriorlandini@gmail.com>, 2022.
 # Matteo Mazzanti <info@taklia.com>, 2022.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-02 09:07+0200\n"
+"POT-Creation-Date: 2025-06-23 14:53+0200\n"
 "PO-Revision-Date: 2025-05-26 23:57+0000\n"
 "Last-Translator: umläute <dev@umlaeute.mur.at>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -2007,6 +2007,9 @@ msgstr "Finestra parent"
 
 msgid "Message..."
 msgstr "Messaggio..."
+
+msgid "Asistente IA..."
+msgstr ""
 
 msgid "HTML Manual..."
 msgstr "Manuale HTML..."

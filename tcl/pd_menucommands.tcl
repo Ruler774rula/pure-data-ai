@@ -134,6 +134,10 @@ proc ::pd_menucommands::menu_message_dialog {} {
     ::dialog_message::open_message_dialog $::focused_window
 }
 
+proc ::pd_menucommands::menu_ai_assistant_dialog {} {
+    ::dialog_ai_assistant::open_assistant_dialog $::focused_window
+}
+
 proc ::pd_menucommands::menu_find_dialog {} {
     ::dialog_find::open_find_dialog $::focused_window
 }

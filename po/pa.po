@@ -1,12 +1,12 @@
 # Translation of Pure Data 0.43.po to Punjabi.
 # This file is put in the public domain.
-#
+# 
 # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-02 09:07+0200\n"
+"POT-Creation-Date: 2025-06-23 14:53+0200\n"
 "PO-Revision-Date: 2005-11-04 08:04+0530\n"
 "Last-Translator: Amanpreet Singh Alam <amanpreetalam@yahoo.com>\n"
 "Language-Team: Punjabi <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -2051,6 +2051,9 @@ msgstr "ਭੇਜਣ ਝਰੋਖਾ"
 #, fuzzy
 msgid "Message..."
 msgstr "ਸੁਨੇਹਾ"
+
+msgid "Asistente IA..."
+msgstr ""
 
 msgid "HTML Manual..."
 msgstr ""

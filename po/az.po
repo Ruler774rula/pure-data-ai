@@ -1,12 +1,12 @@
 # translation of Pure Data 0.43 to Azerbaijani Turkish
 # This file is put in the public domain.
 # Metin Amiroff <metin@karegen.com>, 2004.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-02 09:07+0200\n"
+"POT-Creation-Date: 2025-06-23 14:53+0200\n"
 "PO-Revision-Date: 2004-03-12 22:22+0200\n"
 "Last-Translator: Metin Amiroff <metin@karegen.com>\n"
 "Language-Team: Azerbaijani <translation-team-az@lists.sourceforge.net>\n"
@@ -2049,6 +2049,9 @@ msgstr "Fayl Yolla"
 #, fuzzy
 msgid "Message..."
 msgstr "İsmarış"
+
+msgid "Asistente IA..."
+msgstr ""
 
 msgid "HTML Manual..."
 msgstr ""

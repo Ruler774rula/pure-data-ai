@@ -39,6 +39,7 @@ package require dialog_array
 package require dialog_audio
 package require dialog_canvas
 package require dialog_data
+package require dialog_ai_assistant
 package require dialog_font
 package require dialog_gatom
 package require dialog_iemgui
@@ -86,6 +87,7 @@ namespace import ::dialog_array::pdtk_array_dialog
 namespace import ::dialog_audio::pdtk_audio_dialog
 namespace import ::dialog_canvas::pdtk_canvas_dialog
 namespace import ::dialog_data::pdtk_data_dialog
+namespace import ::dialog_ai_assistant::open_assistant_dialog
 namespace import ::dialog_find::pdtk_showfindresult
 namespace import ::dialog_font::pdtk_canvas_dofont
 namespace import ::dialog_gatom::pdtk_gatom_dialog
