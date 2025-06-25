@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data-0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-23 14:53+0200\n"
+"POT-Creation-Date: 2025-06-25 14:39+0200\n"
 "PO-Revision-Date: 2005-09-14 12:49+0530\n"
 "Last-Translator: Ankit Patel <ankit644@yahoo.com>\n"
 "Language-Team: Gujarati <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -2045,6 +2045,9 @@ msgstr "મોકલો વિન્ડો"
 msgid "Close subwindows"
 msgstr "આ ટેબ/વિન્ડો બંધ કરો"
 
+msgid "Pd Console/Logs"
+msgstr ""
+
 #, fuzzy
 msgid "Parent Window"
 msgstr "મોકલો વિન્ડો"
@@ -2053,7 +2056,7 @@ msgstr "મોકલો વિન્ડો"
 msgid "Message..."
 msgstr "સંદેશો"
 
-msgid "Asistente IA..."
+msgid "AI Assistant..."
 msgstr ""
 
 msgid "HTML Manual..."

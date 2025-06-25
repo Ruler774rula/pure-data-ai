@@ -67,6 +67,7 @@ proc ::dialog_audio::apply {mytoplevel {force ""}} {
 
 proc ::dialog_audio::cancel {mytoplevel} {
     destroy $mytoplevel
+    ::pd_bindings::check_quit_after_window_destroyed
 }
 
 proc ::dialog_audio::ok {mytoplevel} {

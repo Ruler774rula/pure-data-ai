@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-23 14:53+0200\n"
+"POT-Creation-Date: 2025-06-25 14:39+0200\n"
 "PO-Revision-Date: 2009-09-13 01:51+0200\n"
 "Last-Translator: Γεώργιος Κερατζάκης <geokeratz@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -2015,6 +2015,9 @@ msgstr "Γονεϊκό Παράθυρο"
 msgid "Close subwindows"
 msgstr "Κλείσιμο αυτού του παραθύρου;;"
 
+msgid "Pd Console/Logs"
+msgstr ""
+
 msgid "Parent Window"
 msgstr "Γονεϊκό Παράθυρο"
 
@@ -2022,7 +2025,7 @@ msgstr "Γονεϊκό Παράθυρο"
 msgid "Message..."
 msgstr "Μήνυμα"
 
-msgid "Asistente IA..."
+msgid "AI Assistant..."
 msgstr ""
 
 msgid "HTML Manual..."

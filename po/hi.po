@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-23 14:53+0200\n"
+"POT-Creation-Date: 2025-06-25 14:39+0200\n"
 "PO-Revision-Date: 2005-05-04 12:50+0530\n"
 "Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -2042,6 +2042,9 @@ msgstr "भेजें विंडो"
 msgid "Close subwindows"
 msgstr "इस tab/window बंद करें"
 
+msgid "Pd Console/Logs"
+msgstr ""
+
 #, fuzzy
 msgid "Parent Window"
 msgstr "भेजें विंडो"
@@ -2050,7 +2053,7 @@ msgstr "भेजें विंडो"
 msgid "Message..."
 msgstr "संदेश"
 
-msgid "Asistente IA..."
+msgid "AI Assistant..."
 msgstr ""
 
 msgid "HTML Manual..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.54.1\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-23 14:53+0200\n"
+"POT-Creation-Date: 2025-06-25 14:39+0200\n"
 "PO-Revision-Date: 2024-08-28 18:54+0200\n"
 "Last-Translator: phlostically <phlostically@mailinator.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -1962,13 +1962,16 @@ msgstr "Malsekva fenestro"
 msgid "Close subwindows"
 msgstr ""
 
+msgid "Pd Console/Logs"
+msgstr ""
+
 msgid "Parent Window"
 msgstr "Patra fenestro"
 
 msgid "Message..."
 msgstr "Mesaĝo…"
 
-msgid "Asistente IA..."
+msgid "AI Assistant..."
 msgstr ""
 
 msgid "HTML Manual..."

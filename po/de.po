@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.52\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-23 14:53+0200\n"
+"POT-Creation-Date: 2025-06-25 14:39+0200\n"
 "PO-Revision-Date: 2025-05-26 23:57+0000\n"
 "Last-Translator: umläute <dev@umlaeute.mur.at>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -2005,13 +2005,16 @@ msgstr "Vorheriges Fenster"
 msgid "Close subwindows"
 msgstr "Unterfenster schließen"
 
+msgid "Pd Console/Logs"
+msgstr ""
+
 msgid "Parent Window"
 msgstr "Übergeordnetes Fenster"
 
 msgid "Message..."
 msgstr "Message..."
 
-msgid "Asistente IA..."
+msgid "AI Assistant..."
 msgstr ""
 
 msgid "HTML Manual..."

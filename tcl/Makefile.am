@@ -25,6 +25,7 @@ dist_libpdtcl_DATA = \
     dialog_audio.tcl \
     dialog_canvas.tcl \
     dialog_data.tcl \
+    dialog_ai_assistant.tcl \
     dialog_find.tcl \
     dialog_font.tcl \
     dialog_gatom.tcl \
@@ -34,6 +35,7 @@ dist_libpdtcl_DATA = \
     dialog_midi.tcl \
     dialog_path.tcl \
     dialog_startup.tcl \
+    dialog_welcome.tcl \
     helpbrowser.tcl \
     opt_parser.tcl \
     pd_bindings.tcl \

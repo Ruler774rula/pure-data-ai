@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-23 14:53+0200\n"
+"POT-Creation-Date: 2025-06-25 14:39+0200\n"
 "PO-Revision-Date: 2010-01-29 21:09+0100\n"
 "Last-Translator: Andras Muranyi <muranyia@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -2017,6 +2017,9 @@ msgstr "Szülő ablak"
 msgid "Close subwindows"
 msgstr "Bezárja ezt az ablakot?"
 
+msgid "Pd Console/Logs"
+msgstr ""
+
 msgid "Parent Window"
 msgstr "Szülő ablak"
 
@@ -2024,7 +2027,7 @@ msgstr "Szülő ablak"
 msgid "Message..."
 msgstr "Üzenet"
 
-msgid "Asistente IA..."
+msgid "AI Assistant..."
 msgstr ""
 
 msgid "HTML Manual..."

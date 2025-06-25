@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.53.1\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-23 14:53+0200\n"
+"POT-Creation-Date: 2025-06-25 14:39+0200\n"
 "PO-Revision-Date: 2025-05-28 09:02+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -1977,13 +1977,16 @@ msgstr "החלון הקודם"
 msgid "Close subwindows"
 msgstr "סגירת תת־חלונות"
 
+msgid "Pd Console/Logs"
+msgstr ""
+
 msgid "Parent Window"
 msgstr "חלון ההורה"
 
 msgid "Message..."
 msgstr "הודעה…"
 
-msgid "Asistente IA..."
+msgid "AI Assistant..."
 msgstr ""
 
 msgid "HTML Manual..."

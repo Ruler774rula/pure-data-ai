@@ -74,7 +74,7 @@ proc ::pd_menus::create_menubar {} {
         $::pdwindow_menubar add cascade -label [_ [string totitle $mymenu]] \
             -underline $underlined -menu $m
     }
-
+    
     if {$::windowingsystem eq "win32"} {create_system_menu $::patch_menubar}
     . configure -menu $::patch_menubar
 }
@@ -331,7 +331,7 @@ proc ::pd_menus::build_window_menu {mymenu} {
     $mymenu add command -label [_ "Close subwindows"] \
         -command {pdsend "pd close-subwindows"}
     $mymenu add  separator
-    $mymenu add command -label [_ "Pd window"] -command {::pd_menucommands::scheduleAction menu_raise_pdwindow} \
+    $mymenu add command -label [_ "Pd Console/Logs"] -command {::pd_menucommands::scheduleAction menu_raise_pdwindow} \
         -accelerator "$accelerator+R"
     $mymenu add command -label [_ "Parent Window"] \
         -command {::pd_menucommands::scheduleAction menu_send $::focused_window findparent}
@@ -344,7 +344,7 @@ proc ::pd_menus::build_tools_menu {mymenu} {
     $mymenu add command -label [_ "Message..."] \
         -accelerator "$accelerator+Shift+M" \
         -command {::pd_menucommands::scheduleAction menu_message_dialog}
-    $mymenu add command -label [_ "Asistente IA..."] \
+    $mymenu add command -label [_ "AI Assistant..."] \
         -accelerator "$accelerator+Shift+A" \
         -command {::pd_menucommands::scheduleAction menu_ai_assistant_dialog}
 }

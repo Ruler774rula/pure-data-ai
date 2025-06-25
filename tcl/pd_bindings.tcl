@@ -315,7 +315,7 @@ proc ::pd_bindings::patch_bindings {mytoplevel} {
     catch {bind $tkcanvas <KeyPress-ISO_Left_Tab> "::pd_bindings::canvas_cycle %W -1 %K %A 1 %k" } stderr
 
     # window protocol bindings
-    wm protocol $mytoplevel WM_DELETE_WINDOW "pdsend \"$mytoplevel menuclose 0\""
+    wm protocol $mytoplevel WM_DELETE_WINDOW "::pd_bindings::check_last_window $mytoplevel"
     bind $tkcanvas <Destroy> "::pd_bindings::patch_destroy %W"
 }
 
@@ -431,6 +431,66 @@ proc ::pd_bindings::window_destroy {winid} {
             set ::focused_window [winfo toplevel $::focused_window]
         }
     }
+}
+
+# Check if this is the last window and quit if it is
+proc ::pd_bindings::check_last_window {mytoplevel} {
+    # Count patch windows before closing this one
+    set all_windows [winfo children .]
+    set patch_windows 0
+    foreach window $all_windows {
+        if {[string match ".x*" $window]} {
+            incr patch_windows
+        }
+    }
+    
+    # Send the menuclose message to close this window
+    pdsend "$mytoplevel menuclose 0"
+    
+    # If this was the last patch window, quit Pd after a short delay
+    # to allow the window to close properly first
+    if {$patch_windows <= 1} {
+        after 100 ::pd_connect::menu_quit
+    }
+}
+
+# Check if there are any patch windows open and quit if none
+proc ::pd_bindings::check_quit_after_window_destroyed {} {
+    # Count patch windows and other dialog windows
+    set all_windows [winfo children .]
+    set patch_windows 0
+    set other_windows 0
+    
+    foreach window $all_windows {
+        if {[string match ".x*" $window]} {
+            incr patch_windows
+        } elseif {$window ne ".pdwindow" && $window ne ".welcome"} {
+            # Count other windows that are not pdwindow or welcome
+            incr other_windows
+        }
+    }
+    
+    # Quit if there are no patch windows open
+    # This will close the program when the welcome window is closed
+    if {$patch_windows == 0} {
+        after 100 ::pd_connect::menu_quit
+    }
+}
+
+# Setup global destroy binding to check if we should quit
+proc ::pd_bindings::setup_window_destroy_bindings {} {
+    # Bind to all toplevel windows
+    foreach window [winfo children .] {
+        if {[winfo toplevel $window] eq $window && $window ne ".pdwindow"} {
+            # Only bind if not already bound
+            if {[lsearch [bind $window] "<Destroy>"] < 0} {
+                bind $window <Destroy> {::pd_bindings::check_quit_after_window_destroyed}
+            }
+        }
+    }
+    
+    # Schedule to run again to catch new windows
+    after 1000 ::pd_bindings::setup_window_destroy_bindings
 }
 
 

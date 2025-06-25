@@ -298,9 +298,24 @@ proc ::pdwindow::pdwindow_bindings {} {
         bind .pdwindow <$::modifier-Key-w>   "wm withdraw .pdwindow"
         wm protocol .pdwindow WM_DELETE_WINDOW "wm withdraw .pdwindow"
     } else {
-        # TODO should it possible to close the Pd window and keep Pd open?
+        # Allow closing the Pd window and keep Pd open if other windows exist
         bind .pdwindow <$::modifier-Key-w>   "wm iconify .pdwindow"
-        wm protocol .pdwindow WM_DELETE_WINDOW "::pd_connect::menu_quit"
+        wm protocol .pdwindow WM_DELETE_WINDOW {
+            # Check if there are any patch windows open
+            set patch_windows 0
+            foreach window [winfo children .] {
+                if {[string match ".x*" $window]} {
+                    incr patch_windows
+                }
+            }
+            if {$patch_windows > 0} {
+                # If there are patch windows, just hide the pdwindow
+                wm withdraw .pdwindow
+            } else {
+                # If no patch windows, quit Pd
+                ::pd_connect::menu_quit
+            }
+        }
     }
 }
 

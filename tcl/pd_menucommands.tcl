@@ -1,6 +1,8 @@
 
 package provide pd_menucommands 0.1
 
+package require pd_bindings
+
 namespace eval ::pd_menucommands:: {
     variable untitled_number "1"
 
@@ -16,6 +18,12 @@ proc ::pd_menucommands::menu_new {} {
     if { ! [file isdirectory $::filenewdir]} {set ::filenewdir $::env(HOME)}
     pdsend "pd menunew $untitled_name-$untitled_number [enquote_path $::filenewdir]"
     incr untitled_number
+    
+    # Close welcome window if it's open
+    if {[winfo exists .welcome]} {
+        wm withdraw .welcome
+        # No need to check for quit here as a new patch will be created
+    }
 }
 
 proc ::pd_menucommands::menu_open {} {

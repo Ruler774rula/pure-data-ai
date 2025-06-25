@@ -64,6 +64,7 @@ proc ::dialog_midi::apply {mytoplevel {force ""}} {
 
 proc ::dialog_midi::cancel {mytoplevel} {
     destroy $mytoplevel
+    ::pd_bindings::check_quit_after_window_destroyed
 }
 
 proc ::dialog_midi::ok {mytoplevel} {

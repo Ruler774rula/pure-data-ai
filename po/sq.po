@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-23 14:53+0200\n"
+"POT-Creation-Date: 2025-06-25 14:39+0200\n"
 "PO-Revision-Date: 2024-07-08 17:37+0200\n"
 "Last-Translator: Besnik Bleta <besnik@spymac.com>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -2044,6 +2044,9 @@ msgstr "Dritare dërgimesh"
 msgid "Close subwindows"
 msgstr "Mbyll këtë skedë/dritare"
 
+msgid "Pd Console/Logs"
+msgstr ""
+
 #, fuzzy
 msgid "Parent Window"
 msgstr "Dritare dërgimesh"
@@ -2052,7 +2055,7 @@ msgstr "Dritare dërgimesh"
 msgid "Message..."
 msgstr "Mesazh"
 
-msgid "Asistente IA..."
+msgid "AI Assistant..."
 msgstr ""
 
 msgid "HTML Manual..."

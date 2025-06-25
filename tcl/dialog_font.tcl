@@ -115,6 +115,7 @@ proc ::dialog_font::cancel {gfxstub} {
         pdsend "$gfxstub cancel"
     }
     destroy .font
+    ::pd_bindings::check_quit_after_window_destroyed
 }
 
 proc ::dialog_font::update_font_dialog {mytoplevel} {

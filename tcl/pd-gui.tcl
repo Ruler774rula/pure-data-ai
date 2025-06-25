@@ -48,6 +48,7 @@ package require dialog_midi
 package require dialog_path
 package require dialog_startup
 package require dialog_preferences
+package require dialog_welcome
 package require helpbrowser
 package require pd_menucommands
 package require opt_parser
@@ -96,6 +97,7 @@ namespace import ::dialog_midi::pdtk_midi_dialog
 namespace import ::dialog_midi::pdtk_alsa_midi_dialog
 namespace import ::dialog_path::pdtk_path_dialog
 namespace import ::dialog_startup::pdtk_startup_dialog
+namespace import ::dialog_welcome::open_welcome_dialog
 namespace import ::pd_i18n::_
 
 # hack - these should be better handled in the C code
@@ -536,16 +538,22 @@ proc pdtk_pd_startup {major minor bugfix test
     set ::font_zoom2_measured [fit_font_into_metrics $::font_family $::font_weight $::font_zoom2_metrics]
     ::pd_bindings::class_bindings
     ::pd_bindings::global_bindings
+    # Start monitoring windows to quit when all are closed
+    ::pd_bindings::setup_window_destroy_bindings
     ::pd_menus::create_menubar
     ::pdwindow::create_window
     ::pdwindow::configure_menubar
     ::pd_menus::configure_for_pdwindow
     ::pdwindow::create_window_finalize
+    wm withdraw .pdwindow
     load_startup_plugins
     pdsend "pd init [enquote_path [pwd]] $oldtclversion \
         $::font_measured $::font_zoom2_measured"
     open_filestoopen
     set ::done_init 1
+    
+    # Open the welcome dialog
+    ::dialog_welcome::open_welcome_dialog
 }
 
 ##### routine to ask user if OK and, if so return '1' (or else '0')

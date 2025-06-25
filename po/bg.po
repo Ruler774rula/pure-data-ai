@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-23 14:53+0200\n"
+"POT-Creation-Date: 2025-06-25 14:39+0200\n"
 "PO-Revision-Date: 2022-10-30 07:04+0000\n"
 "Last-Translator: Max Neupert <abonnements@revolwear.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -2026,6 +2026,9 @@ msgstr "Прозореца за изпращане на файлове"
 msgid "Close subwindows"
 msgstr "Затваряне на този таб/прозорец"
 
+msgid "Pd Console/Logs"
+msgstr ""
+
 #, fuzzy
 msgid "Parent Window"
 msgstr "Прозореца за изпращане на файлове"
@@ -2033,7 +2036,7 @@ msgstr "Прозореца за изпращане на файлове"
 msgid "Message..."
 msgstr "Съобщение..."
 
-msgid "Asistente IA..."
+msgid "AI Assistant..."
 msgstr ""
 
 msgid "HTML Manual..."

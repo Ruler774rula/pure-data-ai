@@ -360,6 +360,7 @@ proc ::dialog_array::openlistview {mytoplevel} {
 
 proc ::dialog_array::cancel {mytoplevel} {
     pdsend "$mytoplevel cancel"
+    ::pd_bindings::check_quit_after_window_destroyed
 }
 
 proc ::dialog_array::ok {mytoplevel} {

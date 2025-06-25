@@ -1,6 +1,8 @@
 
 package provide wheredoesthisgo 0.1
 
+package require pd_bindings
+
 namespace eval ::pd::private:: {
     # these are some private variables for which there is
     # no more specific namespace yet...
@@ -27,6 +29,12 @@ proc open_file {filename} {
         pdsend "pd open [enquote_path $basename] [enquote_path $directory]"
         # now this is done in pd_guiprefs
         ::pd_guiprefs::update_recentfiles $filename
+        
+        # Close welcome window if it's open
+        if {[winfo exists .welcome]} {
+            wm withdraw .welcome
+            # No need to check for quit here as a patch will be opened
+        }
     } else {
         ::pdwindow::post [_ "ignoring '%s': doesn't look like a Pd file" $filename]
         ::pdwindow::post "\n"
