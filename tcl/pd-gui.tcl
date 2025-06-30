@@ -540,6 +540,8 @@ proc pdtk_pd_startup {major minor bugfix test
     ::pd_bindings::global_bindings
     # Start monitoring windows to quit when all are closed
     ::pd_bindings::setup_window_destroy_bindings
+    # Reset the quit_scheduled flag
+    ::pd_connect::reset_quit_scheduled
     ::pd_menus::create_menubar
     ::pdwindow::create_window
     ::pdwindow::configure_menubar

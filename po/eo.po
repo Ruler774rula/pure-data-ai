@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.54.1\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-25 14:39+0200\n"
+"POT-Creation-Date: 2025-06-30 09:09+0200\n"
 "PO-Revision-Date: 2024-08-28 18:54+0200\n"
 "Last-Translator: phlostically <phlostically@mailinator.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -721,6 +721,12 @@ msgstr "Malsukcesis lanĉi Pd"
 
 msgid "Failed to start Pd-core"
 msgstr "Malsukcesis lanĉi Pd-core"
+
+#, tcl-format
+msgid ""
+"Do you want to save the changes you made in '%s'? This will close all "
+"patches and quit Pd."
+msgstr ""
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
 msgstr "(Tcl) MANKAS FERMA KUNIGA KRAMPO «}»: "
@@ -2023,10 +2029,6 @@ msgstr "Forgesi ĉion…"
 
 msgid "Tabbed preferences"
 msgstr "Langetaj preferoj"
-
-#, tcl-format
-msgid "Do you want to save the changes you made in '%s'?"
-msgstr ""
 
 msgid "Properties"
 msgstr "Atributoj"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.53.0\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-25 14:39+0200\n"
+"POT-Creation-Date: 2025-06-30 09:09+0200\n"
 "PO-Revision-Date: 2023-04-26 08:48+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -742,6 +742,12 @@ msgstr ""
 #, fuzzy
 msgid "Failed to start Pd-core"
 msgstr "'%s'을(를) 설치하는 데 실패했습니다!"
+
+#, fuzzy, tcl-format
+msgid ""
+"Do you want to save the changes you made in '%s'? This will close all "
+"patches and quit Pd."
+msgstr "'%s'에서 변경된 사항을 저장 하겠습니까?"
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
 msgstr "(Tcl) MISSING CLOSE-BRACE '}': "
@@ -2078,10 +2084,6 @@ msgstr "모두 잊기..."
 #, fuzzy
 msgid "Tabbed preferences"
 msgstr "환경설정"
-
-#, tcl-format
-msgid "Do you want to save the changes you made in '%s'?"
-msgstr "'%s'에서 변경된 사항을 저장 하겠습니까?"
 
 msgid "Properties"
 msgstr "속성"

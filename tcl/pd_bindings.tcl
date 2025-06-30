@@ -9,6 +9,7 @@ namespace eval ::pd_bindings:: {
     namespace export dialog_bindings
     namespace export patch_bindings
     variable key2iso
+    variable quit_scheduled 0
 }
 set ::pd_bindings::key2iso ""
 
@@ -131,7 +132,12 @@ proc ::pd_bindings::global_bindings {} {
         bind all <KeyPress-Clear>          {::pd_bindings::sendkey %W 1 %K "" 1 %k}
         bind all <KeyRelease-Clear>        {::pd_bindings::sendkey %W 0 %K "" 1 %k}
     } else {
-        bind_capslock all $::modifier-Key q       {::pd_connect::menu_quit}
+        bind_capslock all $::modifier-Key q       {
+            if {![info exists ::pd_bindings::quit_scheduled] || !$::pd_bindings::quit_scheduled} {
+                set ::pd_bindings::quit_scheduled 1
+                after 100 ::pd_connect::menu_quit
+            }
+        }
         bind_capslock all $::modifier-Key m       {menu_minimize %W}
 
         bind all <$::modifier-Next>        {menu_raisenextwindow}    ;# PgUp
@@ -444,13 +450,39 @@ proc ::pd_bindings::check_last_window {mytoplevel} {
         }
     }
     
-    # Send the menuclose message to close this window
-    pdsend "$mytoplevel menuclose 0"
+    # Mark that we're handling window closure to prevent duplicate handling
+    set ::pd_bindings::quit_scheduled 1
     
-    # If this was the last patch window, quit Pd after a short delay
-    # to allow the window to close properly first
+    # If this is the last patch window, close all and quit
     if {$patch_windows <= 1} {
-        after 100 ::pd_connect::menu_quit
+        # Show confirmation dialog for the last window
+        raise $mytoplevel
+        set filename [lindex [array get ::pdtk_canvas::::window_fullname $mytoplevel] 1]
+        set message [_ "Do you want to save the changes you made in '%s'? This will close all patches and quit Pd." $filename]
+        set answer [tk_messageBox -message $message -type yesnocancel -default "yes" \
+                        -parent $mytoplevel -icon question]
+        switch -- $answer {
+            yes {
+                pdsend "$mytoplevel menusave 1"
+                # After saving, quit Pd
+                after 100 ::pd_connect::menu_quit
+            }
+            no {
+                # Close without saving and quit Pd
+                pdsend "$mytoplevel menuclose 1"
+                after 100 ::pd_connect::menu_quit
+            }
+            cancel {
+                # Reset the quit_scheduled flag if the user cancels
+                set ::pd_bindings::quit_scheduled 0
+                return
+            }
+        }
+    } else {
+        # Not the last window, just close this one with confirmation
+        pdsend "$mytoplevel menuclose 0"
+        # Reset the flag since we're not quitting
+        after 50 {set ::pd_bindings::quit_scheduled 0}
     }
 }
 
@@ -473,7 +505,11 @@ proc ::pd_bindings::check_quit_after_window_destroyed {} {
     # Quit if there are no patch windows open
     # This will close the program when the welcome window is closed
     if {$patch_windows == 0} {
-        after 100 ::pd_connect::menu_quit
+        # Use a variable to track if we've already scheduled a quit
+        if {![info exists ::pd_bindings::quit_scheduled] || !$::pd_bindings::quit_scheduled} {
+            set ::pd_bindings::quit_scheduled 1
+            after 100 ::pd_connect::menu_quit
+        }
     }
 }
 
@@ -489,8 +525,18 @@ proc ::pd_bindings::setup_window_destroy_bindings {} {
         }
     }
     
-    # Schedule to run again to catch new windows
-    after 1000 ::pd_bindings::setup_window_destroy_bindings
+    # Schedule to run again to catch new windows, but less frequently
+    after 2000 ::pd_bindings::setup_window_destroy_bindings
+}
+
+# Setup destroy binding for a specific window
+proc ::pd_bindings::setup_window_destroy_binding {window} {
+    if {[winfo toplevel $window] eq $window && $window ne ".pdwindow"} {
+        # Only bind if not already bound
+        if {[lsearch [bind $window] "<Destroy>"] < 0} {
+            bind $window <Destroy> {::pd_bindings::check_quit_after_window_destroyed}
+        }
+    }
 }
 
 

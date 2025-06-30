@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.53.0\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-25 14:39+0200\n"
+"POT-Creation-Date: 2025-06-30 09:09+0200\n"
 "PO-Revision-Date: 2024-07-08 17:33+0200\n"
 "Last-Translator: Alex Nadzharov <anadjarov@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -742,6 +742,12 @@ msgstr ""
 #, fuzzy
 msgid "Failed to start Pd-core"
 msgstr "Невозможно установить '%s'!"
+
+#, fuzzy, tcl-format
+msgid ""
+"Do you want to save the changes you made in '%s'? This will close all "
+"patches and quit Pd."
+msgstr "Вы хотите сохранить изменения в '%s'?"
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
 msgstr ""
@@ -2085,10 +2091,6 @@ msgstr "Забыть все..."
 #, fuzzy
 msgid "Tabbed preferences"
 msgstr "Настройки"
-
-#, tcl-format
-msgid "Do you want to save the changes you made in '%s'?"
-msgstr "Вы хотите сохранить изменения в '%s'?"
 
 msgid "Properties"
 msgstr "Свойства"

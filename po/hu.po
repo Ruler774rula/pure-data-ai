@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-25 14:39+0200\n"
+"POT-Creation-Date: 2025-06-30 09:09+0200\n"
 "PO-Revision-Date: 2010-01-29 21:09+0100\n"
 "Last-Translator: Andras Muranyi <muranyia@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -764,6 +764,12 @@ msgstr ""
 
 msgid "Failed to start Pd-core"
 msgstr ""
+
+#, fuzzy, tcl-format
+msgid ""
+"Do you want to save the changes you made in '%s'? This will close all "
+"patches and quit Pd."
+msgstr "El akarja menteni '%s' változásait?"
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
 msgstr ""
@@ -2084,10 +2090,6 @@ msgstr ""
 #, fuzzy
 msgid "Tabbed preferences"
 msgstr "Beállítások"
-
-#, tcl-format
-msgid "Do you want to save the changes you made in '%s'?"
-msgstr "El akarja menteni '%s' változásait?"
 
 msgid "Properties"
 msgstr "Tulajdonságok"

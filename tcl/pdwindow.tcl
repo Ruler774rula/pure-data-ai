@@ -312,8 +312,12 @@ proc ::pdwindow::pdwindow_bindings {} {
                 # If there are patch windows, just hide the pdwindow
                 wm withdraw .pdwindow
             } else {
-                # If no patch windows, quit Pd
-                ::pd_connect::menu_quit
+                # If no patch windows, quit Pd using the centralized quit check
+                # Use a variable to track if we've already scheduled a quit
+                if {![info exists ::pd_bindings::quit_scheduled] || !$::pd_bindings::quit_scheduled} {
+                    set ::pd_bindings::quit_scheduled 1
+                    after 100 ::pd_connect::menu_quit
+                }
             }
         }
     }

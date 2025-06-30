@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-25 14:39+0200\n"
+"POT-Creation-Date: 2025-06-30 09:09+0200\n"
 "PO-Revision-Date: 2009-09-13 01:51+0200\n"
 "Last-Translator: Γεώργιος Κερατζάκης <geokeratz@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -762,6 +762,12 @@ msgstr ""
 
 msgid "Failed to start Pd-core"
 msgstr ""
+
+#, fuzzy, tcl-format
+msgid ""
+"Do you want to save the changes you made in '%s'? This will close all "
+"patches and quit Pd."
+msgstr "Αποθήκευση αλλαγών που έγιναν στο '%s';"
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
 msgstr ""
@@ -2083,10 +2089,6 @@ msgstr ""
 #, fuzzy
 msgid "Tabbed preferences"
 msgstr "Προτιμήσεις"
-
-#, tcl-format
-msgid "Do you want to save the changes you made in '%s'?"
-msgstr "Αποθήκευση αλλαγών που έγιναν στο '%s';"
 
 msgid "Properties"
 msgstr "Ιδιότητες"

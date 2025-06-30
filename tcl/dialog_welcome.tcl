@@ -26,9 +26,9 @@ proc ::dialog_welcome::create_dialog {} {
     
     # Create the toplevel window
     toplevel $welcome_window -class DialogWindow
-    wm title $welcome_window [_ "Welcome to Pure Data"]
-    wm minsize $welcome_window 400 300
-    wm geometry $welcome_window 500x350+300+300
+f    wm title $welcome_window [_ "Welcome to Pure Data"]
+    wm minsize $welcome_window 400 400
+    wm geometry $welcome_window 500x450+300+300
     wm protocol $welcome_window WM_DELETE_WINDOW {
         # Hide the window when closed, don't destroy it
         wm withdraw .welcome
@@ -78,7 +78,7 @@ proc ::dialog_welcome::create_dialog {} {
     pack $welcome_window.main.recent -side top -fill both -expand 1 -pady 10
     
     # Create a listbox for recent files
-    listbox $welcome_window.main.recent.list -height 5 -width 40 -selectmode single \
+    listbox $welcome_window.main.recent.list -height 10 -width 40 -selectmode single \
         -yscrollcommand "$welcome_window.main.recent.scroll set"
     scrollbar $welcome_window.main.recent.scroll -command "$welcome_window.main.recent.list yview"
     pack $welcome_window.main.recent.scroll -side right -fill y

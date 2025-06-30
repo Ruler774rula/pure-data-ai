@@ -163,3 +163,8 @@ proc ::pd_connect::menu_quit {} {
     # schedule nuke_pd - but it gets cancelled if Pd responds to verifyquit.
     after 2000 ::pd_connect::nuke_pd
 }
+
+# Reset the quit_scheduled flag when Pd starts a new session
+proc ::pd_connect::reset_quit_scheduled {} {
+    set ::pd_bindings::quit_scheduled 0
+}

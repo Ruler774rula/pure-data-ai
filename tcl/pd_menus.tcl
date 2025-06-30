@@ -140,7 +140,12 @@ proc ::pd_menus::build_file_menu {mymenu {patchwindow true}} {
     $mymenu add  separator
     if {$::windowingsystem ne "aqua"} {
         $mymenu add command -label [_ "Quit"]    -accelerator "$accelerator+Q" \
-            -command {::pd_connect::menu_quit}
+            -command {
+                if {![info exists ::pd_bindings::quit_scheduled] || !$::pd_bindings::quit_scheduled} {
+                    set ::pd_bindings::quit_scheduled 1
+                    after 100 ::pd_connect::menu_quit
+                }
+            }
     }
 
     # update recent files

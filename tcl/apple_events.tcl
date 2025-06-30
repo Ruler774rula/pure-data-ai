@@ -52,7 +52,10 @@ proc ::tk::mac::ShowPreferences {args} {
 
 # kAEQuitApplication
 proc ::tk::mac::Quit {args} {
-    ::pd_connect::menu_quit
+    if {![info exists ::pd_bindings::quit_scheduled] || !$::pd_bindings::quit_scheduled} {
+        set ::pd_bindings::quit_scheduled 1
+        after 100 ::pd_connect::menu_quit
+    }
 }
 
 # on Tk/Cocoa, respond to the "Pd Help" option in the Help menu which

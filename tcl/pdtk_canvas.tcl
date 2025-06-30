@@ -203,18 +203,11 @@ proc pdtk_canvas_saveas {mytoplevel initialfile initialdir destroyflag} {
     ::pd_guiprefs::update_recentfiles $filename
 }
 
-##### ask user Save? Discard? Cancel?, and if so, send a message on to Pd ######
+##### ask user Save? Discard? Cancel? only when closing with X button ######
 proc ::pdtk_canvas::pdtk_canvas_menuclose {mytoplevel reply_to_pd} {
-    raise $mytoplevel
-    set filename [lindex [array get ::pdtk_canvas::::window_fullname $mytoplevel] 1]
-    set message [_ "Do you want to save the changes you made in '%s'?" $filename]
-    set answer [tk_messageBox -message $message -type yesnocancel -default "yes" \
-                    -parent $mytoplevel -icon question]
-    switch -- $answer {
-        yes {pdsend "$mytoplevel menusave 1"}
-        no {pdsend $reply_to_pd}
-        cancel {}
-    }
+    # Always close without confirmation here
+    # Confirmation is now handled by check_last_window when needed
+    pdsend $reply_to_pd
 }
 
 #------------------------------------------------------------------------------#

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.53-0\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-25 14:39+0200\n"
+"POT-Creation-Date: 2025-06-30 09:09+0200\n"
 "PO-Revision-Date: 2025-05-26 23:57+0000\n"
 "Last-Translator: umläute <dev@umlaeute.mur.at>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -730,6 +730,12 @@ msgstr "Échec du démarrage de Pd"
 
 msgid "Failed to start Pd-core"
 msgstr "Échec au démarrage de Pd-core"
+
+#, fuzzy, tcl-format
+msgid ""
+"Do you want to save the changes you made in '%s'? This will close all "
+"patches and quit Pd."
+msgstr "Enregistrer les modifications de '%s' ?"
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
 msgstr "(Tcl) ACCOLADE FERMANTE MANQUANTE '}' : "
@@ -2075,10 +2081,6 @@ msgstr "Tout oublier..."
 
 msgid "Tabbed preferences"
 msgstr "Préférences en onglet"
-
-#, tcl-format
-msgid "Do you want to save the changes you made in '%s'?"
-msgstr "Enregistrer les modifications de '%s' ?"
 
 msgid "Properties"
 msgstr "Propriétés"

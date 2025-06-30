@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-25 14:39+0200\n"
+"POT-Creation-Date: 2025-06-30 09:09+0200\n"
 "PO-Revision-Date: 2024-07-08 17:33+0200\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese (Portugal) <https://hosted.weblate.org/projects/"
@@ -725,6 +725,12 @@ msgstr "falha de inicialização do Pd"
 
 msgid "Failed to start Pd-core"
 msgstr "Falha ao iniciar o núcleo do Pd"
+
+#, fuzzy, tcl-format
+msgid ""
+"Do you want to save the changes you made in '%s'? This will close all "
+"patches and quit Pd."
+msgstr "Quer gravar as modificações feitas em '%s'?"
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
 msgstr "(Tcl) MISSING CLOSE-BRACE '}': "
@@ -2055,10 +2061,6 @@ msgstr "Esquecer Todas..."
 
 msgid "Tabbed preferences"
 msgstr "Preferências em guias"
-
-#, tcl-format
-msgid "Do you want to save the changes you made in '%s'?"
-msgstr "Quer gravar as modificações feitas em '%s'?"
 
 msgid "Properties"
 msgstr "Propriedades"

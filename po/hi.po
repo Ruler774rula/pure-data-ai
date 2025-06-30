@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: pd-dev@iem.at\n"
-"POT-Creation-Date: 2025-06-25 14:39+0200\n"
+"POT-Creation-Date: 2025-06-30 09:09+0200\n"
 "PO-Revision-Date: 2005-05-04 12:50+0530\n"
 "Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/pure-data/pure-"
@@ -775,6 +775,12 @@ msgid "Pd startup failure"
 msgstr ""
 
 msgid "Failed to start Pd-core"
+msgstr ""
+
+#, tcl-format
+msgid ""
+"Do you want to save the changes you made in '%s'? This will close all "
+"patches and quit Pd."
 msgstr ""
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
@@ -2111,10 +2117,6 @@ msgstr ""
 #, fuzzy
 msgid "Tabbed preferences"
 msgstr "प्राथमिकताएं..."
-
-#, tcl-format
-msgid "Do you want to save the changes you made in '%s'?"
-msgstr ""
 
 msgid "Properties"
 msgstr ""
